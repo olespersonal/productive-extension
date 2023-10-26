@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Productivity extension",
+  "version": "1.0",
+  "description": "Blocker for distractive websites",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["activeTab", "webNavigation"]
+}
