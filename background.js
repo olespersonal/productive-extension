@@ -1,7 +1,16 @@
-const blockedUrls = ["youtube.com"];
+// const blockedUrls = ["youtube.com"];
 
-chrome.webNavigation.onBeforeNavigate.addListener((details) => {
+const getWebsiteList = async () => {
+  return new Promise((resolve) => {
+    chrome.storage.local.get(["websiteList"], (result) => {
+      resolve(result.websiteList ?? []);
+    });
+  });
+};
+
+chrome.webNavigation.onBeforeNavigate.addListener(async (details) => {
   const url = new URL(details.url);
+  const blockedUrls = await getWebsiteList();
 
   if (blockedUrls.some((blockedUrl) => url.hostname.includes(blockedUrl))) {
     // Block navigation to the blocked URL

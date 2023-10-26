@@ -1,0 +1,64 @@
+html,
+body {
+  margin: 0;
+}
+
+body {
+  padding: 20px;
+  width: 300px;
+}
+
+p {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.first-container {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+input {
+  height: 30px;
+  padding: 0px 10px;
+  border: 2px solid rgb(48, 230, 31);
+  border-radius: 10px;
+  outline: none;
+}
+
+button {
+  height: 30px;
+  padding: 5px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: rgb(48, 230, 31);
+  border: none;
+  color: white;
+}
+
+button:hover {
+  background-color: rgb(37, 184, 24);
+}
+
+#website-list {
+  max-height: 200px;
+  overflow: auto;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.delete-btn {
+  color: rgb(236, 26, 54);
+  cursor: pointer;
+}
