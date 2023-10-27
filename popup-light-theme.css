@@ -58,8 +58,10 @@ button:hover {
   background-color: rgb(37, 124, 29);
 }
 
-#website-list {
+#website-list,
+#message-list {
   max-height: 200px;
+  padding-bottom: 20px;
   overflow: auto;
   margin-top: 5px;
   display: flex;
@@ -69,6 +71,7 @@ button:hover {
 
 .list-item {
   display: flex;
+  gap: 20px;
   justify-content: space-between;
 }
 
