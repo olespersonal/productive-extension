@@ -1,12 +1,13 @@
 html,
 body {
   margin: 0;
-  padding: 10;
   height: 100%;
+}
+
+body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(91, 204, 91);
 }
 
 p {

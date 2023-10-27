@@ -6,6 +6,18 @@ body {
 body {
   padding: 20px;
   width: 300px;
+  background-color: #fbf4e7;
+}
+
+.theme-selection {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#theme-btn {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 p {
@@ -23,9 +35,11 @@ p {
 }
 
 input {
+  flex: 1;
   height: 30px;
   padding: 0px 10px;
-  border: 2px solid rgb(48, 230, 31);
+  background-color: transparent;
+  border: 2px solid rgb(56 169 45);
   border-radius: 10px;
   outline: none;
 }
@@ -35,13 +49,13 @@ button {
   padding: 5px 20px;
   border-radius: 10px;
   cursor: pointer;
-  background-color: rgb(48, 230, 31);
+  background-color: rgb(56 169 45);
   border: none;
   color: white;
 }
 
 button:hover {
-  background-color: rgb(37, 184, 24);
+  background-color: rgb(37, 124, 29);
 }
 
 #website-list {
@@ -60,5 +74,6 @@ button:hover {
 
 .delete-btn {
   color: rgb(236, 26, 54);
+  text-decoration: underline;
   cursor: pointer;
 }

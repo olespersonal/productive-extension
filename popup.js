@@ -1,6 +1,32 @@
 const websiteList = document.getElementById("website-list");
 const websiteInput = document.getElementById("website-input");
 const addBtn = document.getElementById("add-btn");
+const themeBtn = document.getElementById("theme-btn");
+const themeStylesheet = document.getElementById("theme-stylesheet");
+
+themeBtn.addEventListener("click", () => {
+  chrome.storage.local.get(["isDarkTheme"], (result) => {
+    chrome.storage.local.set({ isDarkTheme: !result.isDarkTheme });
+    if (result.isDarkTheme) {
+      themeStylesheet.setAttribute("href", "popup-light-theme.css");
+      themeBtn.textContent = "Light";
+    } else {
+      themeStylesheet.setAttribute("href", "popup-dark-theme.css");
+      themeBtn.textContent = "Dark";
+    }
+  });
+});
+
+chrome.storage.local.get(["isDarkTheme"], (result) => {
+  console.log("result", result);
+  if (result.isDarkTheme) {
+    themeStylesheet.setAttribute("href", "popup-dark-theme.css");
+    themeBtn.textContent = "Dark";
+  } else {
+    themeStylesheet.setAttribute("href", "popup-light-theme.css");
+    themeBtn.textContent = "Light";
+  }
+});
 
 const deleteBtn = `<div class="delete-btn">remove</div>`;
 
